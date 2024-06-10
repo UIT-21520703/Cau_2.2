@@ -7,10 +7,8 @@ password = st.text_input('Password', '', type='password')
 if st.button('Đăng nhập'):
     if username == '21520703' and password == '2003':
         st.success('Đăng nhập thành công')
-        with st.spinner('Đang chuyển hướng...'):
-            time.sleep(2)
-        # Sử dụng st.markdown để chèn liên kết
-        st.markdown('<meta http-equiv="refresh" content="0; url=http://www.uit.edu.vn/" />', unsafe_allow_html=True)
+        time.sleep(2)
+        wb.open('http://www.uit.edu.vn/')
     else:
         st.error('Sai username hoặc password')
 
